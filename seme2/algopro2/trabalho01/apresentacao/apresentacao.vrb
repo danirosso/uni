@@ -1,0 +1,34 @@
+\frametitle{A história toda:}
+\begin{lstlisting}[language=c++, basicstyle=\tiny]
+#include "raylib.h"
+
+int main (){
+
+    InitWindow(800, 600, "rect");
+    SetTargetFPS(60);
+
+
+    while(!WindowShouldClose()){
+    BeginDrawing();
+
+    Vector2 posicao = {
+        .x = 10,
+        .y = 20,
+    };
+
+    Rectangle exemplo = {
+        .x = posicao.x,
+        .y = posicao.y,
+        .width = 100,
+        .height = 200,
+    };
+
+    DrawRectangleRec(exemplo, BLUE);
+
+    EndDrawing();
+    }
+
+    CloseWindow();
+}
+\end{lstlisting}
+
